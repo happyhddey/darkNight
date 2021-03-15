@@ -4,24 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Night</title>
+    <title>Where is you DUCK?</title>
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div>
-        <h3 id="map"></h3>
+
+    <div id="title-wrapper">
+        <h1 id="title">FIND DUCK</h1>
     </div>
 
-    <div id="buttonBlock">
+    <div id="score-wrapper">
+        <h2 id="score">ScoreText</h2>
+    </div>
+
+    <div id="map-wrapper">
+        <h3 id="map">MapText</h3>
+    </div>
+
+    <div id="button-wrapper">
         <div id="top">
-            <button id="botton_up" onclick="game.up()">▲</button>
+            <button id="button_up">▲</button>
         </div>
         <div id="middle">
-            <button id="button_left" onclick="game.left()">◀</button>
-            <button id="button_right" onclick="game.right()">▶</button>
+            <button id="button_left">◀</button>
+            <button id="button_right">▶</button>
         </div>
         <div id="bottom">
-            <button id="botton_down" onclick="game.down()">▼</button>
+            <button id="button_down">▼</button>
+        </div>
+    </div>
+
+    <div class="modal-wrapper" style="display: none;">
+        <div class="modal">
+            <div class="modal-title">YOU FOUND DUCK!</div>
+            <p>Play again?</p>
+            <div class="close-wrapper">
+                <button id="close" onclick="buttonClose()">YES</button>
+            </div>
         </div>
     </div>
 
